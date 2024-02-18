@@ -4,10 +4,11 @@
 	dotnet build
 	```
 2) Перейдите в файле appsettings.Development.json и измените это поле на свой.
+- примечание порт по умолчанию это 5432
 	```shell
 	"ConnectionStrings": {
  		"DefaultConnection": "Server=localhost;Port={port};User Id={userName};Password={password};Database={name database}"
-  	},
+ 	},
 	```
 3) Перейти в папку Yalla.DataAccess и запустить команду
 	```shell
