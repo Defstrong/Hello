@@ -1,3 +1,22 @@
+### Соберем приложение перед использованием rout-ов
+1) Перейти в папку yalla-crm и запустить команду
+	```shell
+	dotnet build
+	```
+2) Перейдите в файле appsettings.Development.json и измените это поле на свой.
+	```shell
+	"ConnectionStrings": {
+ 		"DefaultConnection": "Server=localhost;Port={port};User Id={userName};Password={password};Database={name database}"
+  	},
+	```
+3) Перейти в папку Yalla.DataAccess и запустить команду
+	```shell
+	dotnet ef --startup-project ../Yalla.Presentation database update
+	```
+4) Перейти в папку Yalla.Presentation и запустить команду
+	```shell
+	dotnet run
+	```
 # 1) Консультация
 #### Rout: 
 ```json
@@ -26,7 +45,7 @@ http://localhost:{port}/api/orders/consulting
             "productsHistory": // (isContinue = true)
             [
                 {
-   	 	    "id": "", // может быть бустым
+		            "id": "", // может быть бустым
                     "isReturned": false,
                     "count": 2, // > 0
                     "amountWithMarkup": 5, // > 0 
@@ -51,7 +70,7 @@ http://localhost:{port}/api/orders/consulting
                 }
             ],
             "pharmacy": {
-  		"id": "", // может быть бустым
+				"id": "", // может быть бустым
                 "name": "", // min: 2, max: 100 символов
                 "address": "", // min: 2, max: 255 символов
                 "landmark": "", // min: 2, max: 255 символов
@@ -85,14 +104,14 @@ http://localhost:{port}/api/orders/insearch/{orderID}
             "productsHistory": // (isContinue = true)
             [
                 {
-		    "id": "", // может быть бустым
+		            "id": "", // может быть бустым
                     "isReturned": false,
                     "count": 2, // > 0
                     "amountWithMarkup": 5, // > 0 
                     "amountWithoutMarkup": 3, // > 0
                     "returnTo": 2, // min: 1, max: 2 
                     "product": {
-			"id": "", // может быть бустым
+			            "id": "", // может быть бустым
                         "name": "", // min: 1, max: 50 символов
                         "type": "", // min: 1, max: 50 символов
                         "dosage": "", // min: 1, max: 5000 символов
@@ -110,7 +129,7 @@ http://localhost:{port}/api/orders/insearch/{orderID}
                 }
             ],
             "pharmacy": {
-		"id": "", // может быть бустым
+				"id": "", // может быть бустым
                 "name": "", // min: 2, max: 100 символов
                 "address": "", // min: 2, max: 255 символов
                 "landmark": "", // min: 2, max: 255 символов
