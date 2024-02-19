@@ -46,7 +46,7 @@ http://localhost:{port}/api/orders/consulting
             "productsHistory": // (isContinue = true)
             [
                 {
-		    "id": "", // может быть бустым
+                    "id": "", // может быть бустым
                     "count": 2, // > 0
                     "product": {
                         "id": "",
@@ -62,7 +62,7 @@ http://localhost:{port}/api/orders/consulting
                 }
             ],
             "pharmacy": {
-		"id": "", // может быть бустым
+                "id": "" // может быть бустым
             }
         }
     ],
