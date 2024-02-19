@@ -51,17 +51,12 @@ http://localhost:{port}/api/orders/consulting
                     "product": {
                         "id": "",
                         "name": "", // min: 1, max: 50 символов
-                        "type": "", // min: 1, max: 50 символов
                         "dosage": "", // min: 1, max: 5000 символов
                         "countOnPackage": 1, // min: 1
                         "ageFrom": 1, // min: 1
                         "ageTo": 1, // min: 1
                         "country": "", // min: 2, max: 100 символов
-                        "priceWithMarkup": 11, // > 0
-                        "priceWithoutMarkup": 12, // > 0
-                        "dificit": false,
                         "releaseForm": 1, // min: 1, max: 33
-                        "packagingUnit": 1, // min: 1, max: 6
                         "typeOfPackaging": 1 // min: 1, max: 5
                     }
                 }
