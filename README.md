@@ -46,12 +46,8 @@ http://localhost:{port}/api/orders/consulting
             "productsHistory": // (isContinue = true)
             [
                 {
-		            "id": "", // может быть бустым
-                    "isReturned": false,
+		    "id": "", // может быть бустым
                     "count": 2, // > 0
-                    "amountWithMarkup": 5, // > 0 
-                    "amountWithoutMarkup": 3, // > 0
-                    "returnTo": 2, // min: 1, max: 2 
                     "product": {
                         "id": "",
                         "name": "", // min: 1, max: 50 символов
@@ -71,15 +67,7 @@ http://localhost:{port}/api/orders/consulting
                 }
             ],
             "pharmacy": {
-				"id": "", // может быть бустым
-                "name": "", // min: 2, max: 100 символов
-                "address": "", // min: 2, max: 255 символов
-                "landmark": "", // min: 2, max: 255 символов
-                "contact": "", // min: 2, max: 500 символов
-                "linkPharmacy": "",
-                "markup": 1,
-                "markupType": 1,
-                "payoutMethod": 1
+		"id": "", // может быть бустым
             }
         }
     ],
