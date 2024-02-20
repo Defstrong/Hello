@@ -88,16 +88,13 @@ http://localhost:{port}/api/orders/insearch/{orderID}
             "productsHistory": // (isContinue = true)
             [
                 {
-		            "id": "", // может быть бустым
-                    "isReturned": false,
+		    "id": "", // может быть бустым
                     "count": 2, // > 0
                     "amountWithMarkup": 5, // > 0 
                     "amountWithoutMarkup": 3, // > 0
-                    "returnTo": 2, // min: 1, max: 2 
                     "product": {
-			            "id": "", // может быть бустым
-                        "name": "", // min: 1, max: 50 символов
-                        "type": "", // min: 1, max: 50 символов
+			"id": "", // может быть бустым
+                        "name": "", // min: 1, max: 50 символов 
                         "dosage": "", // min: 1, max: 5000 символов
                         "countOnPackage": 1, // min: 1
                         "ageFrom": 1, // min: 1
@@ -105,7 +102,6 @@ http://localhost:{port}/api/orders/insearch/{orderID}
                         "country": "", // min: 2, max: 100 символов
                         "priceWithMarkup": 11, // > 0
                         "priceWithoutMarkup": 12, // > 0
-                        "dificit": false,
                         "releaseForm": 1, // min: 1, max: 33
                         "packagingUnit": 1, // min: 1, max: 6
                         "typeOfPackaging": 1 // min: 1, max: 5
@@ -113,7 +109,7 @@ http://localhost:{port}/api/orders/insearch/{orderID}
                 }
             ],
             "pharmacy": {
-				"id": "", // может быть бустым
+		"id": "", // может быть бустым
                 "name": "", // min: 2, max: 100 символов
                 "address": "", // min: 2, max: 255 символов
                 "landmark": "", // min: 2, max: 255 символов
