@@ -153,9 +153,10 @@ http://localhost:{port}/api/orders/placement/{orderId}
 ```json
 {
   "orderId": "{orderId}",
-  "isContinue": false,
+  "isContinue": true,
   "timeToObtainClientApproval": "2024-01-13T17:42:54.703", //Оператор должен ввести время (isContinue = true)
-  "totalOrderAmountExcludingDelivery": 0, // > 0 (isContinue = true)
+  "totalOrderAmountExcludingDelivery": 1, // > 0 (isContinue = true)
+  "phoneNumber": "111222333", // min:9, max: 13 symbols
   "address": "", // max: 500 символов 
   "landmark": "", // max: 500 символов
   "geolocationOfClientAddress": "", // max: 500
