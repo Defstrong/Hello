@@ -29,7 +29,7 @@ http://localhost:{port}/api/orders/consulting
 {
     "orderId": "", 
     "isContinue": false,
-    "createdAt": "2024.01.13", // date format YYYY-MM-DD
+    "createdAt": "2024-01-13T17:42:54.703", // date format YYYY-MM-DD
     "orderNumber": 1,
     "operator": "", // max: 30 символ
     "clientPhoneNumber": "111222333", // min:9, max: 13 symbols
@@ -42,19 +42,18 @@ http://localhost:{port}/api/orders/consulting
     "pharmacyOrders": 
     [
         {
-            "id": "", // может быть бустым
+            "id": "", // может быть пустым
             "productsHistory": // (isContinue = true)
             [
                 {
-                    "id": "", // может быть бустым
+                    "id": "", // может быть пустым
                     "count": 2, // > 0
                     "product": {
                         "id": "",
                         "name": "", // min: 1, max: 50 символов
                         "dosage": "", // min: 1, max: 5000 символов
                         "countOnPackage": 1, // min: 1
-                        "ageFrom": 1, // min: 1
-                        "ageTo": 1, // min: 1
+			"ageType": 1, // min: 1, max: 2
                         "country": "", // min: 2, max: 100 символов
                         "releaseForm": 1, // min: 1, max: 33
                         "typeOfPackaging": 1 // min: 1, max: 5
@@ -62,7 +61,7 @@ http://localhost:{port}/api/orders/consulting
                 }
             ],
             "pharmacy": {
-                "id": "" // может быть бустым
+                "id": "" // может быть пустым
             }
         }
     ],
@@ -84,23 +83,22 @@ http://localhost:{port}/api/orders/insearch/{orderID}
     "pharmacyOrders": 
     [
         {
-            "id": "", // может быть бустым
+            "id": "", // может быть пустым
             "productsHistory": // (isContinue = true)
             [
                 {
-		    "id": "", // может быть бустым
+		    "id": "", // может быть пустым
                     "count": 2, // > 0
                     "amountWithMarkup": 5, // > 0 
                     "amountWithoutMarkup": 3, // > 0
 		    "arrivalDate":"2024-01-13T17:42:54.703", // может быть пустым если Pharmacy.IsAbroad = false
                     "comment": "another fot this product", // max: 5000
                     "product": {
-			"id": "", // может быть бустым
+			"id": "", // может быть пустым
                         "name": "", // min: 1, max: 50 символов 
                         "dosage": "", // min: 1, max: 5000 символов
                         "countOnPackage": 1, // min: 1
-                        "ageFrom": 1, // min: 1
-                        "ageTo": 1, // min: 1
+			"ageType": 1, // min: 1, max: 2
                         "country": "", // min: 2, max: 100 символов
                         "priceWithMarkup": 11, // > 0
                         "priceWithoutMarkup": 12, // > 0
@@ -111,9 +109,10 @@ http://localhost:{port}/api/orders/insearch/{orderID}
                 }
             ],
             "pharmacy": {
-		"id": "", // может быть бустым
+		"id": "", // может быть пустым
                 "name": "", // min: 2, max: 100 символов
                 "isAbroad": true,
+                "country": "asdf", // max: 5000 если isAbroad = true то не может быть пустым
                 "address": "", // min: 2, max: 255 символов
                 "landmark": "", // min: 2, max: 255 символов
                 "contact": "", // min: 2, max: 500 символов
@@ -124,7 +123,7 @@ http://localhost:{port}/api/orders/insearch/{orderID}
             }
         }
     ],
-  "comment": ""
+  "comment": "" // max: 5000
 }
 ```
 
