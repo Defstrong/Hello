@@ -92,6 +92,8 @@ http://localhost:{port}/api/orders/insearch/{orderID}
                     "count": 2, // > 0
                     "amountWithMarkup": 5, // > 0 
                     "amountWithoutMarkup": 3, // > 0
+		    "arrivalDate":"2024-01-13T17:42:54.703", // может быть пустым если Pharmacy.IsAbroad = false
+                    "comment": "another fot this product", // max: 5000
                     "product": {
 			"id": "", // может быть бустым
                         "name": "", // min: 1, max: 50 символов 
@@ -111,6 +113,7 @@ http://localhost:{port}/api/orders/insearch/{orderID}
             "pharmacy": {
 		"id": "", // может быть бустым
                 "name": "", // min: 2, max: 100 символов
+                "isAbroad": true,
                 "address": "", // min: 2, max: 255 символов
                 "landmark": "", // min: 2, max: 255 символов
                 "contact": "", // min: 2, max: 500 символов
