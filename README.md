@@ -248,5 +248,5 @@ http://localhost:5282/api/orders/{OrderState}
 ```
 #### Для получения Заказа по статусу. Получение в формате своего статуса.
 ```http
-http://localhost:5282/api/orders/{OrderState}/{OrderId}
+http://localhost:5282/api/orders/{OrderId}/{OrderState}
 ```
