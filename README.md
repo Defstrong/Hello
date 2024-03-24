@@ -237,4 +237,16 @@ http://localhost{port}/api/orders/return-products/{orderId}
   ],
   "comment": "" // max: 5000
 }
+
+
+```
+
+# 8) Роуты для получения Order - ов.
+#### Для получения Заказа по статусу получение в формате простого Order.
+```http
+http://localhost:5282/api/orders/{OrderState}
+```
+#### Для получения Заказа по статусу. Получение в формате своего статуса.
+```http
+http://localhost:5282/api/orders/{OrderState}/{OrderId}
 ```
