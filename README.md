@@ -101,7 +101,8 @@ http://localhost:{port}/api/orders/insearch/{orderID}
 			"ageType": 1, // min: 1, max: 2
                         "country": "", // min: 2, max: 100 символов
                         "priceWithMarkup": 11, // > 0
-                        "priceWithoutMarkup": 12, // > 0
+                        "priceWithoutMarkup": 12, // > 0,
+                        "linkProduct": "http://googleanother.com",
                         "releaseForm": 1, // min: 1, max: 33
                         "packagingUnit": 1, // min: 1, max: 6
                         "typeOfPackaging": 1 // min: 1, max: 5
@@ -115,7 +116,6 @@ http://localhost:{port}/api/orders/insearch/{orderID}
                 "country": "asdf", // max: 5000 если isAbroad = true то не может быть пустым
                 "address": "", // min: 2, max: 255 символов
                 "contact": "", // min: 2, max: 500 символов
-                "linkPharmacy": "",
                 "payoutMethod": 1
             }
         }
