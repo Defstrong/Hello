@@ -127,7 +127,7 @@ http://localhost:{port}/api/orders/insearch/{orderID}
 # 3) В Поиске
 #### Rout: 
 ```json
-http://localhost:{port}/api/orders/insearch/{orderId}
+http://localhost:5282/api/orders/waiting-client/{orderId}
 ```
 #### Json для запроса.
 
