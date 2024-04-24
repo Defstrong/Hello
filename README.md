@@ -34,6 +34,8 @@ http://localhost:{port}/api/orders/consulting
     "operator": "", // max: 30 символ
     "clientPhoneNumber": "111222333", // min:9, max: 13 symbols
     "clientFullName": "", // Максимальная длина: 50 символов
+    "socialUsername": "another",
+    "contactType": 1, // если socialUsername не пуста то > 0
     "orderType": 1, // min: 1, max: 2  (isContinue = true)
     "comesFrom": 1, // min: 1, max: 12 (isContinue = true)
     "language": 1, // min: 1, max: 3 (isContinue = true)
@@ -229,6 +231,7 @@ http://localhost{port}/api/orders/return-products/{orderId}
     {
       "id": "{productHistoryId}",
       "returnReason": "", // max: 5000
+      "returnedCount": 0, // не может быть больше заказанного количества
       "isReturned": true
     }
   ],
