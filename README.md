@@ -126,7 +126,7 @@ http://localhost:{port}/api/orders/insearch/{orderID}
 }
 ```
 
-# 3) В Поиске
+# 3) В ожидании клиента
 #### Rout: 
 ```json
 http://localhost:5282/api/orders/waiting-client/{orderId}
@@ -158,6 +158,7 @@ http://localhost:{port}/api/orders/placement/{orderId}
   "timeToObtainClientApproval": "2024-01-13T17:42:54.703", //Оператор должен ввести время (isContinue = true)
   "totalOrderAmountExcludingDelivery": 1, // > 0 (isContinue = true)
   "phoneNumber": "111222333", // min:9, max: 13 symbols
+  "socialUsername": "another", // max: 150 symbols
   "address": "", // max: 500 символов 
   "landmark": "", // max: 500 символов
   "geolocationOfClientAddress": "", // max: 500
