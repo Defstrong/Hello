@@ -116,6 +116,7 @@ http://localhost:{port}/api/orders/insearch/{orderID}
                 "name": "", // min: 2, max: 100 символов
                 "isAbroad": true,
                 "country": "asdf", // max: 5000 если isAbroad = true то не может быть пустым
+		"gelolocationLink": "", max: 5000 если isAbroad = true то не может быть пустым
                 "address": "", // min: 2, max: 255 символов
                 "contact": "", // min: 2, max: 500 символов
                 "payoutMethod": 1
@@ -167,6 +168,7 @@ http://localhost:{port}/api/orders/placement/{orderId}
   "remainingPayment": 0, // >= 0
   "paymentStatus": 1, // min: 1, max: 4
   "callingAt": "", // not empty (isContinue = true) and max: 5000
+  "individualDeliveryTime": "2024-01-13T17:42:54.703",
   "deliveryType": 3, //
   "priceForDeliveryOutsideTheCity": 0,
   "cityOrDistrict": "", // max: 50 символов
